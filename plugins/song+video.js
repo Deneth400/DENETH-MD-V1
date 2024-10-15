@@ -1,4 +1,4 @@
-//=============BhashiMDSongDL=============
+//=============DENETH-MD Song DL=============
 
 const {cmd , commands} = require('../command')
 const fg = require('api-dylux')
@@ -19,12 +19,12 @@ const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
 
-let desc = `‎‎*𝗕𝗛𝗔𝗦𝗛𝗜 𝗠𝗗 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥*
+let desc = `‎‎*DENETH-MD SONG DOWNLOADER*
 
-🎧 ‎𝗧𝗮𝘁𝗶𝗹𝗲 : ${data.title}
+🎧 ‎𝗧𝗶𝘁𝗹𝗲 : ${data.title}
 ⏰ 𝗧𝗶𝗺𝗲 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 : ${data.timestamp}
 📤 𝗨𝗽𝗹𝗼𝗮𝗱 𝗢𝗻 : ${data.ago}
-🪩 𝗩𝗶𝗲𝘄𝘀 : ${data.views}
+🧐 𝗩𝗶𝗲𝘄𝘀 : ${data.views}
 ‎
 Your Song Download Request Uploading Fallowing. You Can See File Audio Type And Document Type.`
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
@@ -48,7 +48,7 @@ reply(`${e}`)
 }
 })
 
-//=============BhashiMDVideoDL=============
+//=============DENETH-MD Video DL=============
 
 cmd({
     pattern: "video",
@@ -64,9 +64,9 @@ const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
 
-let desc = `‎‎*𝗕𝗛𝗔𝗦𝗛𝗜 𝗠𝗗 𝗩𝗜𝗗𝗘𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥*
+let desc = `‎‎*DENETH-MD VIDEO DOWNLOADER*
 
-🎬 ‎𝗧𝗮𝘁𝗶𝗹𝗲 : ${data.title}
+🎬 ‎𝗧𝗶𝘁𝗹𝗲 : ${data.title}
 ⏰ 𝗧𝗶𝗺𝗲 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 : ${data.timestamp}
 📤 𝗨𝗽𝗹𝗼𝗮𝗱 𝗢𝗻 : ${data.ago}
 🪩 𝗩𝗶𝗲𝘄𝘀 : ${data.views}
