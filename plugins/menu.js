@@ -1,4 +1,4 @@
-const {readEnv} = require('../lib/database')
+const config = require('../config')
 const {cmd , commands} = require('../command')
 
 cmd({
@@ -9,7 +9,6 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-const config = await readEnv();
 let menu = {
 main: '',
 download: '',
@@ -27,31 +26,31 @@ menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
 
 let madeMenu = `🥰*Hello ${pushname}*
 
-> 📱DOWNLOAD COMMANDS
+| 📱DOWNLOAD COMMANDS
 ${menu.download}
 
-> MAIN COMMANDS🕶
+| MAIN COMMANDS🕶
 ${menu.main}
 
-> GROUP COMMNADS🎎
+| GROUP COMMNADS🎎
 ${menu.group}
 
-> OWNER COMMANDS🎃
+| OWNER COMMANDS🎃
 ${menu.owner}
 
-> CONVERT COMMANDS✨
+| CONVERT COMMANDS✨
 ${menu.convert}
 
-> SEARCH COMMANDS🎞
+| SEARCH COMMANDS🎞
 ${menu.search}
 
-ᴅᴇɴᴇᴛʜ-ᴍᴅ ʙʏ ᴅᴇɴᴇᴛʜ ʜᴀɴꜱᴀᴋᴀ ᴋᴇᴇʀᴛʜɪʀᴀᴛʜɴᴀ🖤
+> ᴅᴇɴᴇᴛʜ-ᴍᴅ ʙʏ ᴅᴇɴᴇᴛʜ ʜᴀɴꜱᴀᴋᴀ ᴋᴇᴇʀᴛʜɪʀᴀᴛʜɴᴀ🖤
 `
 
 await conn.sendMessage(from,{image:{url:"https://github.com/denethhansaka/EXAMPLE/blob/main/images/DENETH-MD.jpg?raw=true"},caption:madeMenu},{quoted:mek})//kemathinam IMG URL ekata alive image eka danna URL EKA THIYENA THENA MEKA TYPE KARANNA ᴄᴏɴꜰɪɢ.ᴀʟɪᴠᴇ_ɪᴍᴀɢᴇ
   
 }catch(e){
-console.log(e)
-reply('${e}')
+console.log(e);
+reply(`${e}`)
 }
-});
+})
