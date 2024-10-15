@@ -51,6 +51,6 @@ await conn.sendMessage(from,{image:{url:"https://github.com/denethhansaka/EXAMPL
   
 }catch(e){
 console.log(e);
-reply('${e}')
+reply(`${e}`)
 }
 })
