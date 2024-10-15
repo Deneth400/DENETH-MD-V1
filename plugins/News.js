@@ -23,7 +23,7 @@ try{
 const news = await fetchJson(`${apilink}/hiru`)
   
 const msg = `
-           ⭐ *HIRU NEWS VISHA-MD* ⭐
+           🌤 *HIRU NEWS BY DENETH-MD* 🌤
 
        
 • *Title* - ${news.result.title}
@@ -57,7 +57,7 @@ try{
 const news = await fetchJson(`${apilink}/sirasa`)
   
 const msg = `
-           🔺 *SIRASA NEWS VISHWA-MD* 🔺
+           🔺 *SIRASA NEWS BY DENETH-MD* 🔺
 
        
 • *Title* - ${news.result.title}
@@ -91,7 +91,7 @@ try{
 const news = await fetchJson(`${apilink}/derana`)
   
 const msg = `
-           📑 *DERANA NEWS VISHWA-M* 📑
+           📑 *DERANA NEWS BY DERANA-MD* 📑
 
        
 • *Title* - ${news.result.title}
