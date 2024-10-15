@@ -5,6 +5,7 @@ const {sleep} = require('../lib/functions')
 cmd({
     pattern: "restart",
     desc: "RESTART THE DENETH-MD WA-BOT",
+    react: "🔄",
     category: "owner",
     filename: __filename
 },
