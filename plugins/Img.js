@@ -41,7 +41,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                 caption: `
 👨‍💻 *Image ${i + 1} from your search!* 👨‍💻
         *Enjoy these images! 📸*
-> ❯❯ 𝐩𝐨𝐰𝐫𝐞𝐝 𝐛𝐲 𝐯𝐢𝐬𝐡𝐰𝐚-𝐦𝐝
+> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇɴᴇᴛʜ-ᴍᴅ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡᴀ-ʙᴏᴛ ʙʏ ᴅᴇɴᴇᴛʜ ʜᴀɴꜱᴀᴋᴀ ᴋᴇᴇʀᴛʜɪʀᴀᴛʜɴᴀ
 `
 }, { quoted: mek });
 }
