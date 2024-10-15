@@ -3,7 +3,7 @@ const {cmd , commands} = require('../command')
 
 cmd({
     pattern: "alive",
-    desc: "Check bot online or no.",
+    desc: "CHECK DENETH-MD WA-BOT ONLINE OR OFFLINE",
     category: "main",
     filename: __filename
 },
