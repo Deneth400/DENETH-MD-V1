@@ -1,90 +1,92 @@
-//=============DENETH-MD Song DL=============
-
 const {cmd , commands} = require('../command')
 const fg = require('api-dylux')
 const yts = require('yt-search')
 
-
 cmd({
     pattern: "song",
-    desc: "download songs.",
+    desc: "download songs",
     category: "download",
     react: "🎧",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply("Please give me url or title")
+if(!q) return reply("*Give A Link📍*")
 const search = await yts(q)
-const data = search.videos[0];
+const data = search.videos[0]
 const url = data.url
 
-let desc = `‎‎*DENETH-MD SONG DOWNLOADER*
+let desc = `────────────────────
+✨𝗤𝗨𝗘𝗘𝗡 𝗭𝗔𝗭𝗜𝗘 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥✨
+────────────────────
 
-🎧 ‎𝗧𝗶𝘁𝗹𝗲 : ${data.title}
-⏰ 𝗧𝗶𝗺𝗲 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 : ${data.timestamp}
-📤 𝗨𝗽𝗹𝗼𝗮𝗱 𝗢𝗻 : ${data.ago}
-🧐 𝗩𝗶𝗲𝘄𝘀 : ${data.views}
-‎
-Your Song Download Request Uploading Fallowing. You Can See File Audio Type And Document Type.`
+╭───────────────╮  
+*➢📌 ᴛɪᴛʟᴇ*÷ ${data.title}
+*➢👀 ᴠɪᴇᴡꜱ*÷ ${data.views}
+*➢💻 ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ*÷ ${data.description}
+*➢⏳ ᴅᴜʀᴀᴛɪᴏɴ*÷ ${data.timestamp}
+*➢⏱️ᴀɢᴏ*÷ ${data.ago}
+╰───────────────╯
+
+> Qᴜᴇᴇɴ-ᴢᴀᴢɪᴇ-ᴍᴅ ʙʏ ɴʙᴛ
+`
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
 //download audio
 
-let down = await fg.yta(url)
+let down = await fg.yta(url)  
 let downloadUrl = down.dl_url
 
-//send audio + document message
-await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
-
-
-
-
-
+//send audio
+await conn.sendMessage(from,{audio:{url: downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
+await conn.sendMessage(from,{document:{url: downloadUrl},mimetype:"audio/mpeg",fileName:data.title + "mp3",caption:"> Qᴜᴇᴇɴ-ᴢᴀᴢɪᴇ-ᴍᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴʙᴛ"},{quoted:mek})
 }catch(e){
-console.log(e)
 reply(`${e}`)
 }
 })
 
-//=============DENETH-MD Video DL=============
+//===========video-dl===========
 
 cmd({
     pattern: "video",
-    desc: "download videos.",
+    desc: "download video",
     category: "download",
     react: "🎬",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply("Please give me url or title")
+if(!q) return reply("*Give A Link📍.*")
 const search = await yts(q)
-const data = search.videos[0];
+const data = search.videos[0]
 const url = data.url
 
-let desc = `‎‎*DENETH-MD VIDEO DOWNLOADER*
+let des = `────────────────────
+✨𝗤𝗨𝗘𝗘𝗡 𝗭𝗔𝗭𝗜𝗘 𝗩𝗜𝗗𝗘𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥✨
+────────────────────
 
-🎬 ‎𝗧𝗶𝘁𝗹𝗲 : ${data.title}
-⏰ 𝗧𝗶𝗺𝗲 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 : ${data.timestamp}
-📤 𝗨𝗽𝗹𝗼𝗮𝗱 𝗢𝗻 : ${data.ago}
-🪩 𝗩𝗶𝗲𝘄𝘀 : ${data.views}
-‎
-Your Video Download Request Uploading Fallowing. You Can See File Video Type And Document Type.`
-await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
+╭───────────────╮  
+*➢📌 ᴛɪᴛʟᴇ*÷ ${data.title}
+*➢👀 ᴠɪᴇᴡꜱ*÷ ${data.views}
+*➢💻 ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ*÷ ${data.description}
+*➢⏳ ᴅᴜʀᴀᴛɪᴏɴ*÷ ${data.timestamp}
+*➢⏱️ᴀɢᴏ*÷ ${data.ago}
+╰───────────────╯
+
+> Qᴜᴇᴇɴ-ᴢᴀᴢɪᴇ-ᴍᴅ ʙʏ ɴʙᴛ
+`
+await conn.sendMessage(from,{image:{url: data.thumbnail},caption:des},{quoted:mek});
 
 //download video
 
-let down = await fg.ytv(url)
+let down = await fg.ytv(url)  
 let downloadUrl = down.dl_url
 
-//send video+ document message
-await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4"},{quoted:mek})
-
-
-
-}catch(e){
-console.log(e)
-reply(`${e}`)
+//send video
+await conn.sendMessage(from,{video:{url: downloadUrl},mimetype:"video/mp4"},{quoted:mek})
+await conn.sendMessage(from,{document:{url: downloadUrl},mimetype:"video/mp4",fileName:data.title + "mp4",caption:"> Qᴜᴇᴇɴ-ᴢᴀᴢɪᴇ-ᴍᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴʙᴛ"},{quoted:mek})
+    
+}catch(a){
+reply(`${a}`)
 }
 })
