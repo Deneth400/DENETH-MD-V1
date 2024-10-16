@@ -18,7 +18,7 @@ let des = `*╔╭────────────╮╕*
 *│Type .menu To Get Bot User*
 *│Menu💫*
 *╰───────────────◎◎▷*`
-return await conn.sendMessage(from,{image: {url: config.ALIVE_IMG},caption: config.ALIVE_MSG},{quoted: mek})
+return await conn.sendMessage(from,{image: {url: "https://github.com/denethhansaka/DENETH-MD-Files/blob/main/Images/DENETH-MD.jpg?raw=true"},caption: config.ALIVE_MSG},{quoted: mek})
 }catch(e){
 console.log(e)
 reply(`${e}`)
