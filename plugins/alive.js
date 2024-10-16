@@ -10,14 +10,6 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-let des = `*╔╭────────────╮╕*
-*╭│ⱧＥLLO, I'm Alive Now👾  │─◎◎▷*
-*╘╰────────────╯╜*
-*│A Qҽҽɳ-乙azie-MD Whatsapp Bot Based │Third Party Application Provide* *Many │Services With A RealTime* *Automated │Consversational* *Experience, Enjoy💫.*
-*│*
-*│Type .menu To Get Bot User*
-*│Menu💫*
-*╰───────────────◎◎▷*`
 return await conn.sendMessage(from,{image: {url: "https://github.com/denethhansaka/DENETH-MD-Files/blob/main/Images/DENETH-MD.jpg?raw=true"},caption: config.ALIVE_MSG},{quoted: mek})
 }catch(e){
 console.log(e)
