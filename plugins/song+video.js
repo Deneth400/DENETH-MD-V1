@@ -6,7 +6,7 @@ const yts = require('yt-search')
 
 
 cmd({
-    pattern: "song1",
+    pattern: "song",
     desc: "download songs.",
     category: "download",
     react: "🎧",
@@ -50,7 +50,7 @@ reply(`${e}`)
 //=============DENETH-MD Video DL=============
 
 cmd({
-    pattern: "video1",
+    pattern: "video",
     desc: "download videos.",
     category: "download",
     react: "🎬",
