@@ -1,4 +1,4 @@
-const config = require('../config')
+const config = require('../lib/database')
 const {cmd , commands} = require('../command')
 
 cmd({
