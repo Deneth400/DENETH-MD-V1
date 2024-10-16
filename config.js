@@ -9,5 +9,6 @@ SESSION_ID: process.env.SESSION_ID || "gmlEQQgK#I3p8_RkDchmZYAjNsuKWATOwQIJjyJW6
 ALIVE_IMG: process.env.ALIVE_IMG || "https://github.com/denethhansaka/DENETH-MD-Files/blob/main/Images/DENETH-MD.jpg?raw=true",
 ALIVE_MSG: process.env.ALIVE_MSG || "Hello, I am Alive Now",
 AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "true",
+MODE: process.env.MODE || "public",
 
 };
